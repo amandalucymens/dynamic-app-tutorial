@@ -2,6 +2,9 @@ import { i } from "@instantdb/react";
 
 const _schema = i.schema({
   entities: {
+    $users: i.entity({
+      email: i.string().unique().indexed().optional(),
+    }),
     poems: i.entity({
       title: i.string(),
       body: i.string(),
